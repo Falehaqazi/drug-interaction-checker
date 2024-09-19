@@ -1,9 +1,12 @@
 require('dotenv').config();
+const mongoose = require('mongoose');
 
-const express = require('express');
-const app = express();
+// Use the MongoDB URI from environment variables
+const dbURI = process.env.MONGODB_URI;
 
-app.use(express.json()); // This allows us to handle data sent by users
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('Connected to MongoDB'))
+    .catch(err => console.error('Could not connect to MongoDB', err));
 
 // Our homepage
 app.get('/', (req, res) => {
