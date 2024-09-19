@@ -1,17 +1,19 @@
 {
-  "name": "druginteractionchecker",
+  "name": "drug-interaction-checker",
   "version": "1.0.0",
-  "main": "index.js",
-"scripts": {
+  "description": "A Node.js app to check for drug interactions.",
+  "main": "app.js",
+  "scripts": {
     "start": "node app.js"
-}
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "express": "^4.21.0",
-    "mongoose": "^8.6.3"
-  }
+    "express": "^4.17.1",
+    "mongoose": "^5.13.8",
+    "dotenv": "^8.2.0"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "author": "Faleha Qazi",
+  "license": "MIT"
 }
